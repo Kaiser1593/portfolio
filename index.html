@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kaïs Padrines</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Barre latérale -->
+    <aside class="sidebar">
+        <h1>Kaïs Padrines</h1>
+        <p>Étudiant en Développement Web</p>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="active">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+
+        <!-- Section Accueil -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <h2>Bienvenue sur mon Portfolio</h2>
+                <p>Bienvenue sur mon portfolio, où je partage mes projets et mes compétences.</p>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Qui suis-je ?</h2>
+                <p>Je m'appelle <strong>Kaïs Padrines</strong>, passionné par le développement web et les nouvelles technologies.</p>
+                <p>je suis constamment à la recherche de nouvelles connaissances et de défis à relever dans ce domaine. Que ce soit le développement ou les nouvelles technologies, j'aime explorer et approfondir mes compétences pour mieux comprendre et maîtriser cet univers en perpétuelle évolution.</p>
+                <p>Toujours curieux et motivé, je suis prêt à échanger et partager ma passion avec d'autres passionnés du numérique ! </p>
+                <a href="CV-KAIS.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <img src="image/project1.jpg" alt="Projet 1">
+                        <h3>Boutique en ligne</h3>
+                        <p>Boutique en ligne réalisé avec WordPress</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="image/project2.jpg" alt="Projet 2">
+                        <h3>Portfolio</h3>
+                        <p>Développement de mon portfolio web en HTML, CSS et JavaScript.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="image/project3.jpg" alt="Projet 3">
+                        <h3>Jeu vidéo</video></h3>
+                        <p>Jeu vidéo de Basketball réalisé avec Unity sur le thème du Feu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Technologies que j'utilise</h2>
+                <div class="skills-icons">
+                    <img src="image/html.png" alt="HTML">
+                    <img src="image/css.png" alt="CSS">
+                    <img src="image/js.png" alt="JavaScript">
+                    <img src="image/wp.png" alt="WordPress">
+                    <img src="image/php.png" alt="PHP">
+                    <img src="image/python.png" alt="Python">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contactez-moi</h2>
+                <form id="contact-form">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
