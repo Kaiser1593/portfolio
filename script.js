@@ -1,27 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("zGg6PSsNVbHjx1E6U"); // Remplace par ta clé publique EmailJS
-
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêche le rechargement de la page
-
-        // Récupère les données du formulaire
-        let formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value
-        };
+emailjs.init("zGg6PSsNVbHjx1E6U"); // Remplace avec ta Public Key
  
-        // Envoie l'email via EmailJS
-        emailjs.send("service_fube5n4", "template_portfolio", formData)
-            .then(function (response) {
-                alert("Message envoyé avec succès !");
-                document.getElementById("contact-form").reset(); // Réinitialise le formulaire
-            })
-            .catch(function (error) {
-                alert("Une erreur est survenue. Réessayez plus tard.");
-                console.error("Erreur EmailJS :", error);
-            });
-   });
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+ 
+    const serviceID = "service_fube5n4"; // Remplace avec ton Service ID
+    const templateID = "template_portfolio"; // Remplace avec ton Template ID
+ 
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        document.getElementById("form-message").textContent = "Message envoyé avec succès ! ✅";
+        document.getElementById("form-message").style.color = "green";
+        this.reset();
+      })
+      .catch((error) => {
+        document.getElementById("form-message").textContent = "Erreur lors de l'envoi ❌";
+        document.getElementById("form-message").style.color = "red";
+        console.error("Erreur EmailJS :", error);
+      });
+  });
  
    const sections = document.querySelectorAll("section");
    const navLinks = document.querySelectorAll(".nav-link");
@@ -99,4 +95,3 @@ document.addEventListener("DOMContentLoaded", function () {
        },
        "retina_detect": true
    });
- });
