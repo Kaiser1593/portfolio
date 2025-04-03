@@ -1,28 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({ duration: 1000, once: true });
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("zGg6PSsNVbHjx1E6U"); // Remplace par ta clé publique EmailJS
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Empêche le rechargement de la page
+
+        // Récupère les données du formulaire
+        let formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
  
-   emailjs.init("BnqpCzJNzeiQRTgbI");
- 
-   document.getElementById("contact-form").addEventListener("submit", function (e) {
-       e.preventDefault();
- 
-       const serviceID = "service_portfolio";
-       const templateID = "template_portfolio";
- 
-       emailjs.sendForm(serviceID, templateID, this)
-           .then(() => {
-               const msg = document.getElementById("form-message");
-               msg.textContent = "Message envoyé avec succès ! ✅";
-               msg.style.color = "green";
-               msg.style.marginTop = "25px";
-               this.reset();
-           })
-           .catch((error) => {
-               const msg = document.getElementById("form-message");
-               msg.textContent = "Erreur lors de l'envoi ❌";
-               msg.style.color = "red";
-               console.error("Erreur EmailJS :", error);
-           });
+        // Envoie l'email via EmailJS
+        emailjs.send("service_fube5n4", "template_portfolio", formData)
+            .then(function (response) {
+                alert("Message envoyé avec succès !");
+                document.getElementById("contact-form").reset(); // Réinitialise le formulaire
+            })
+            .catch(function (error) {
+                alert("Une erreur est survenue. Réessayez plus tard.");
+                console.error("Erreur EmailJS :", error);
+            });
    });
  
    const sections = document.querySelectorAll("section");
@@ -102,4 +100,3 @@ document.addEventListener("DOMContentLoaded", () => {
        "retina_detect": true
    });
  });
- 
