@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #000, #003b46, #ffffff, #00d4d8);
+    background: linear-gradient(to bottom, #000, #0096b1, #ffffff, #00d4d8);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     color: #000000;
@@ -58,14 +58,25 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Espacement des sections */
-.section {
-    max-width: 1000px;
+/* Conteneur principal unifié pour E6 */
+.main-content {
+    background: rgba(255, 255, 255, 0.144);
     margin: 150px auto;
     padding: 50px;
-    background: rgba(255, 255, 255, 0.144); /* Changement de couleur avec transparence */
+    border-radius: 15px;
+    max-width: 1000px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+}
+
+/* Espacement des sections unifiées */
+.section {
+    margin: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.section:last-child {
+    border-bottom: none;
 }
 
 h2 {
@@ -87,7 +98,7 @@ h2 {
 }
 
 .project-card {
-    background: rgba(0, 100, 200, 0.2); /* Changement de couleur avec transparence */
+    background: rgba(0, 100, 200, 0.2);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgb(0, 0, 0);
