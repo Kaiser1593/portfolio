@@ -61,7 +61,7 @@ nav ul li a:hover {
 /* Conteneur principal unifié pour E6 */
 .main-content {
     background: rgba(255, 255, 255, 0.144);
-    margin: 150px auto;
+    margin: 100px auto;
     padding: 50px;
     border-radius: 15px;
     max-width: 1000px;
