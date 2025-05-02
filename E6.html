@@ -1,85 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Épreuve E6 - BTS SIO SL</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épreuve E6 - BTS SIO SLAM</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="a_propos.html">À Propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="E5.html">Épreuve E5</a></li>
-            <li><a href="E6.html">Épreuve E6</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="E5.html">Épreuve E5</a></li>
+      <li><a href="E6.html">Épreuve E6</a></li>
+    </ul>
+  </nav>
 
-    <div class="main-content">
-        <section class="section">
-            <h1>Épreuve E6 - Parcours de Professionnalisation</h1>
-            <p>L’épreuve E6 du BTS SIO option SLAM (Solutions Logicielles et Applications Métiers) permet d’évaluer le parcours professionnel de l’étudiant, à travers ses expériences en entreprise, les missions réalisées, les compétences acquises, et leur adéquation avec les compétences du référentiel du diplôme.</p>
-        </section>
+  <div class="main-content">
+    <section class="section">
+      <h1>Épreuve E6 - Parcours de Professionnalisation</h1>
+      <p>Présentation de deux fiches de situation professionnelle issues d’expériences en entreprise ou en projet encadré.</p>
+    </section>
 
-        <section class="section">
-            <h2>Objectifs de l'épreuve</h2>
-            <ul>
-                <li>Valoriser les expériences professionnelles réalisées pendant la formation</li>
-                <li>Présenter des projets concrets et significatifs réalisés en entreprise ou à l'école</li>
-                <li>Mettre en relation les missions réalisées avec les compétences du référentiel</li>
-                <li>Évaluer la capacité de l’étudiant à justifier ses choix professionnels et techniques</li>
-            </ul>
-        </section>
+    <section class="section">
+      <h2>Situations professionnelles</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="wordpress.PNG" alt="Gestionnaire de tickets" />
+          <h3>Fiche 1 - Gestionnaire de tickets</h3>
+          <p>Développement d’une application web d’assistance (HelpDesk).</p>
+        </div>
+        <div class="project-card">
+          <img src="image/handball.png" alt="Site handball" />
+          <h3>Fiche 2 - Site sur le handball</h3>
+          <p>Création d’un site vitrine pour présenter le handball.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
-        <section class="section">
-            <h2>Déroulement de l'épreuve</h2>
-            <p>L'épreuve E6 se déroule sous la forme d'une soutenance orale d’environ 30 minutes devant un jury. L'étudiant présente un dossier professionnel comprenant :</p>
-            <ul>
-                <li>Deux fiches de situation professionnelle</li>
-                <li>Des documents justificatifs (Fiche réalisation)</li>
-            </ul>
-            <p>Le jury évalue la qualité de la présentation, la clarté des explications, la cohérence du parcours et la capacité à argumenter.</p>
-        </section>
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Image agrandie" />
+  </div>
 
-        <section class="section">
-            <h2>Situations Professionnelles Présentées</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <h3>Fiche 1 - Gestionnaire de tickets</h3>
-                    <p>création d'une application web permettant la gestion de tickets d’assistance</p>
-                    <a href="image_projet/fiche_realisation 1.pdf" class="btn" target="_blank">Voir la fiche 1</a>
-                    <a href="image_projet/Fiche_Projet_HelpDesk.pdf" class="btn" target="_blank">Fiche réalisation</a>
-                </div>
-                <div class="project-card">
-                    <h3>Fiche 2 - Développement d’un site web informatif sur le handball</h3>
-                    <p>Réalisation d'un site web statique sur le thème du handball.</p>
-                    <a href="image_projet/fiche réalisation 2.pdf" class="btn" target="_blank">Voir la fiche 2</a>
-                </div>
-            </div>
-        </section>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
 
-        <section class="section">
-            <h2>Compétences Mobilisées</h2>
-            <ul>
-                <li>Gérer le patrimoine informatique</li>
-                <li>Répondre aux incidents et aux demandes d’assistance</li>
-                <li>Développer la présence en ligne de l’organisation</li>
-                <li>Travailler en mode projet et en équipe</li>
-                <li>Mettre à disposition des utilisateurs un service informatique</li>
-                <li>Organiser son développement professionnel</li>
-            </ul>
-        </section>
+  document.querySelectorAll(".project-card img").forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
 
-        <section class="section">
-            <h2>Conclusion</h2>
-            <p>L’épreuve E6 est une occasion de démontrer son professionnalisme, son autonomie, sa capacité à évoluer dans un environnement professionnel et à appliquer les enseignements théoriques en situation réelle. Elle reflète le sérieux et l'engagement de l’étudiant tout au long de sa formation.</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Kaïs Padrines - Portfolio</p>
-    </footer>
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+  });
+});
+</script>
 </body>
 </html>

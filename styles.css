@@ -183,3 +183,25 @@ button:hover {
 .social-icons a:hover {
     color: #555;
 }
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+    pointer-events: none; /* important ! pour que le clic passe à l'arrière-plan */
+  }
+  

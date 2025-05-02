@@ -95,3 +95,23 @@ emailjs.init("zGg6PSsNVbHjx1E6U"); // Remplace avec ta Public Key
        },
        "retina_detect": true
    });
+
+   document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+  
+    // Quand on clique sur une image de projet
+    document.querySelectorAll(".project-card img").forEach((img) => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
+  
+    // Quand on clique n'importe où sur le fond du lightbox
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+  });
+  
