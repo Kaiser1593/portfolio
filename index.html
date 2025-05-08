@@ -5,54 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Kaïs Padrines</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="icon" type="image/png" href="image/kp.png">
+  <link rel="icon" href="image/kp.png" type="image/x-icon" />
 </head>
 <body>
-  <aside class="sidebar">
-    <nav>
-        <ul>
-          <li><a href="index.html" class="nav-link active">Accueil</a></li>
-          <li><a href="#projects" class="nav-link">Projets</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li><a href="E5.html">Épreuve E5</a></li>
-          <li><a href="E6.html">Épreuve E6</a></li>
-          <li><a href="veille.html">Veille technologique</a></li>
-        </ul>
-      </nav>
-
-  </aside>
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="E5.html">Épreuve E5</a></li>
+      <li><a href="E6.html">Épreuve E6</a></li>
+      <li><a href="veille.html">Veille Technologique</a></li>
+    </ul>
+  </nav>
 
   <main class="main-content">
-    <section id="hero" class="hero">
-      <div class="container">
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Bienvenue sur mon portfolio, où je partage mes projets et mes compétences.</p>
-      </div>
-      <div class="container">
-        <h2>Qui suis-je ?</h2>
-        <p>Je m'appelle <strong>Kaïs Padrines</strong> je suis étudiant en Développement Web, passionné par le développement web et les nouvelles technologies.</p>
-        <p>Je suis constamment à la recherche de nouvelles connaissances et de défis à relever dans ce domaine.</p>
-        <a href="CV-KAIS.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+    <section id="accueil" class="section intro-block">
+      <h2>Bienvenue</h2>
+      <p>Bienvenue sur mon portfolio, je m'appelle <strong>Kaïs Padrines</strong>, étudiant en BTS SIO option SLAM. Vous trouverez ici mes projets, mes compétences, mon parcours professionnel et ma veille technologique.</p>
+    </section>
+
+    <section id="propos" class="section">
+      <h2>À propos</h2>
+      <p>Passionné par le développement web et les technologies numériques, j’ai acquis des compétences solides en HTML, CSS, JavaScript, PHP, SQL, WordPress et Unity. Mon parcours en BTS SIO m’a permis d’apprendre à répondre à des besoins clients concrets avec des solutions logicielles sur mesure.</p>
+    </section>
+
+    <section id="projets" class="section">
+      <h2>Projets</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="projet/wordpress.PNG" alt="Boutique en ligne">
+          <h3>Boutique en ligne</h3>
+          <p>Développement d’un site e-commerce avec WordPress et WooCommerce.</p>
+        </div>
+        <div class="project-card">
+          <img src="projet/portfolio.PNG" alt="Portfolio web">
+          <h3>Portfolio</h3>
+          <p>Création de mon portfolio professionnel en HTML, CSS et JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <img src="projet/jeu.PNG" alt="Jeu Unity">
+          <h3>Jeu vidéo 3D</h3>
+          <p>Conception d’un jeu de basketball avec Unity et gestion des scores.</p>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Mes Projets</h2>
-        <div class="projects-container">
-          <div class="project-card">
-            <img src="wordpress.PNG" alt="Projet 1" />
-            <h3>Boutique en ligne</h3>
-            <p>Boutique en ligne réalisée avec WordPress</p>
-          </div>
-          <div class="project-card">
-            <img src="jeu.PNG" alt="Projet 3" />
-            <h3>Jeu vidéo</h3>
-            <p>Jeu vidéo de basketball réalisé avec Unity</p>
-          </div>
-        </div>
-      </div>
+    <section id="e5" class="section">
+      <h2>Épreuve E5</h2>
+      <p>L’épreuve E5 du BTS SIO SLAM consiste à présenter deux projets applicatifs développés pendant la formation. Cela inclut la conception, le développement, les tests, la documentation et le déploiement. Mes projets démontrent mes compétences techniques et mon autonomie.</p>
+      <a href="E5.html" class="btn">Epreuve E5</a>
+    </section>
+
+    <section id="e6" class="section">
+      <h2>Épreuve E6</h2>
+      <p>Cette épreuve orale évalue deux situations professionnelles vécues lors de stages ou d’alternance. Elle met en valeur ma capacité à m’intégrer dans une équipe, à résoudre des problèmes concrets et à documenter les solutions apportées.</p>
+      <a href="E6.html" class="btn">Épreuve E6</a>
+    </section>
+
+    <section id="veille" class="section">
+      <h2>Veille Technologique</h2>
+      <p><strong>Sujet :</strong> GitHub Copilot et les assistants IA pour développeurs. Cette veille technologique m’a permis d’explorer les impacts de l’intelligence artificielle sur le métier de développeur, en analysant les bénéfices et les limites des assistants comme Copilot.</p>
+      <a href="veille.html" class="btn">Veille Technologique</a>
     </section>
 
     <section id="skills" class="section">
@@ -87,29 +101,32 @@
         <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </section>
-  </main>
 
-  <div id="lightbox">
-    <img id="lightbox-img" src="" alt="Image agrandie" />
-  </div>
+    <div id="lightbox">
+      <img id="lightbox-img" src="" alt="Image agrandie" />
+    </div>
   
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-    
-      document.querySelectorAll(".project-card img").forEach((img) => {
-        img.addEventListener("click", () => {
-          lightboxImg.src = img.src;
-          lightbox.style.display = "flex";
+    <footer>
+      <p>&copy; 2025 Kaïs Padrines — Portfolio BTS SIO SLAM</p>
+    </footer>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+  
+        document.querySelectorAll(".project-card img").forEach((img) => {
+          img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.style.display = "flex";
+          });
+        });
+  
+        lightbox.addEventListener("click", () => {
+          lightbox.style.display = "none";
+          lightboxImg.src = "";
         });
       });
-    
-      lightbox.addEventListener("click", () => {
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
-      });
-    });
     </script>
 </body>
 </html>
