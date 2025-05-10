@@ -88,13 +88,14 @@
         <h2>Contactez-moi</h2>
         <form id="contact-form">
           <label for="name">Nom</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="from_name" required />
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="reply_to" required />
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
           <button type="submit">Envoyer</button>
         </form>
+        <p id="form-message" style="margin-top: 10px;"></p>
       </div>
       <div class="social-icons">
         <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -105,23 +106,44 @@
     <div id="lightbox">
       <img id="lightbox-img" src="" alt="Image agrandie" />
     </div>
-  
+
     <footer>
       <p>&copy; 2025 Kaïs Padrines — Portfolio BTS SIO SLAM</p>
     </footer>
-  
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        emailjs.init("zGg6PSsNVbHjx1E6U");
+
+        const form = document.getElementById("contact-form");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_fube5n4", "template_portfolio", this)
+              .then(() => {
+                document.getElementById("form-message").textContent = "Message envoyé avec succès ! ✅";
+                document.getElementById("form-message").style.color = "lightgreen";
+                this.reset();
+              }, (error) => {
+                document.getElementById("form-message").textContent = "Erreur lors de l'envoi ❌";
+                document.getElementById("form-message").style.color = "red";
+                console.error("Erreur EmailJS :", error);
+              });
+          });
+        }
+
         const lightbox = document.getElementById("lightbox");
         const lightboxImg = document.getElementById("lightbox-img");
-  
+
         document.querySelectorAll(".project-card img").forEach((img) => {
           img.addEventListener("click", () => {
             lightboxImg.src = img.src;
             lightbox.style.display = "flex";
           });
         });
-  
+
         lightbox.addEventListener("click", () => {
           lightbox.style.display = "none";
           lightboxImg.src = "";
