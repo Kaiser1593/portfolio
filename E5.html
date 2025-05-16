@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épreuve E5 - BTS SIO SLAM</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="image/kp.png" type="image/x-icon">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="E5.html">Épreuve E5</a></li>
+      <li><a href="E6.html">Épreuve E6</a></li>
+      <li><a href="veille.html">Veille Technologique</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <section class="section">
+      <h1>Épreuve E5 - Conception et Maintenance de Solutions Applicatives</h1>
+      <p>L’épreuve E5 du BTS SIO option SLAM (Solutions Logicielles et Applications Métiers) évalue la capacité du candidat à concevoir, développer, tester et maintenir des applications répondant à un besoin fonctionnel exprimé par un client ou une organisation. Elle permet également de valoriser le travail accompli en stage ou dans un cadre pédagogique.</p>
+    </section>
+
+    <section class="section">
+      <h2>Déroulement de l'épreuve</h2>
+      <ul>
+        <li><strong>Format :</strong> Épreuve orale ponctuelle</li>
+        <li><strong>Durée :</strong> Environ 40 minutes</li>
+        <li><strong>Contenu :</strong> Présentation de deux projets + entretien avec le jury</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Objectifs de l’épreuve</h2>
+      <ul>
+        <li>Analyser les besoins d’un client ou d’un utilisateur</li>
+        <li>Concevoir une solution logicielle adaptée</li>
+        <li>Réaliser le développement de l’application</li>
+        <li>Effectuer les tests et assurer la qualité logicielle</li>
+        <li>Maintenir ou faire évoluer une solution existante</li>
+        <li>Présenter son travail de manière professionnelle</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Contenu du dossier présenté</h2>
+      <p>Le candidat doit constituer un dossier comportant deux projets :</p>
+      <ul>
+        <li><strong>Projet principal :</strong> réalisé en entreprise pendant un stage ou une alternance</li>
+        <li><strong>Projet secondaire :</strong> réalisé à titre personnel ou dans le cadre de la formation</li>
+      </ul>
+      <p>Chaque projet comprend :</p>
+      <ul>
+        <li>Une fiche descriptive</li>
+        <li>Une documentation technique</li>
+        <li>Des éléments de conception (diagrammes UML, MCD, etc.)</li>
+        <li>Des extraits de code et des captures d’écran</li>
+        <li>Des preuves de tests et de déploiement</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Exemples de projets</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="projet/wordpress.PNG" alt="Projet WordPress" />
+          <h3>Boutique en ligne</h3>
+          <p>Création d'un site e-commerce sous WordPress avec intégration de plugins personnalisés.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Compétences mobilisées</h2>
+      <ul>
+        <li>Analyser les besoins et modéliser une solution</li>
+        <li>Développer une application dans un environnement adapté</li>
+        <li>Mettre en place des tests unitaires et fonctionnels</li>
+        <li>Documenter son travail (technique et utilisateur)</li>
+        <li>Maintenir et faire évoluer un projet existant</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>L’épreuve E5 est une étape essentielle dans la validation du BTS SIO SLAM. Elle permet de valoriser le parcours technique et les compétences professionnelles acquises tout au long de la formation. Une bonne préparation et une présentation structurée sont indispensables pour réussir cette épreuve.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Kaïs Padrines — Portfolio BTS SIO SLAM</p>
+  </footer>
+  
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Image agrandie" />
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".project-card img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      });
+    });
+  </script>
+</body>
+  <div class="stars"></div>
+  <!-- tout le reste de ton contenu ici -->
+</html>

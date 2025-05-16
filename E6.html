@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épreuve E6 - BTS SIO SLAM</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="image/kp.png">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="E5.html">Épreuve E5</a></li>
+      <li><a href="E6.html">Épreuve E6</a></li>
+      <li><a href="veille.html">Veille technologique</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <section class="section">
+      <h1>Épreuve E6 - Parcours de Professionnalisation</h1>
+      <p>L'épreuve E6 du BTS SIO option SLAM est une épreuve orale qui permet d’évaluer le parcours professionnel de l’étudiant à travers ses expériences en entreprise, les missions réalisées et les compétences mobilisées en situation réelle.</p>
+    </section>
+
+    <section class="section">
+      <h2>Déroulement de l'épreuve</h2>
+      <p>Cette épreuve est une soutenance orale de 30 minutes :</p>
+      <ul>
+        <li><strong>Présentation (20 minutes)</strong> : l'étudiant présente deux situations professionnelles significatives rencontrées lors de stages ou en alternance.</li>
+        <li><strong>Entretien (10 minutes)</strong> : échange avec le jury sur les missions, les compétences et la démarche professionnelle.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Contenu du dossier présenté</h2>
+      <ul>
+        <li>Deux <strong>fiches de situation professionnelle</strong></li>
+        <li>Un <strong>tableau de synthèse</strong> des compétences mobilisées</li>
+        <li>Des <strong>documents justificatifs</strong> : maquettes, extraits de code, captures d'écran, fiches de réalisation</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Situations professionnelles</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="projet/helpdesk.png" alt="Gestionnaire de tickets" />
+          <h3>Fiche 1 - Application de gestion de tickets</h3>
+          <p>Développement d’une application web d’assistance (HelpDesk).</p>
+          <a href="fiche/fiche_realisation 1.pdf" class="btn" target="_blank">Fiche réalisation 1</a>
+          <a href="fiche/Fiche_Projet_HelpDesk.pdf" class="btn" target="_blank">Fiche procédure 1</a>
+        </div>
+        <div class="project-card">
+          <img src="projet/hand.png" alt="Site handball" />
+          <h3>Fiche 2 - Site web informatif sur le handball</h3>
+          <p>Création d’un site vitrine pour promouvoir le handball et informer les visiteurs.</p>
+          <a href="fiche/fiche réalisation 2.pdf" class="btn" target="_blank">Fiche réalisation 2</a>
+          <a href="https://kaiser1593.github.io/handball-projet/" class="btn" target="_blank">handball World</a> 
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Compétences mobilisées</h2>
+      <ul>
+        <li>Analyser les besoins et formaliser une solution</li>
+        <li>Développer la présence en ligne de l'organisation</li>
+        <li>Mettre à disposition des utilisateurs un service informatique</li>
+        <li>Travailler en mode projet et en équipe</li>
+        <li>Rédiger une documentation technique</li>
+        <li>Organiser son développement professionnel</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>L’épreuve E6 met en lumière le parcours professionnel de l’étudiant et sa capacité à appliquer les enseignements reçus en BTS SIO dans un cadre professionnel réel. C’est une épreuve déterminante pour valoriser les compétences techniques et comportementales en situation concrète.</p>
+    </section>
+  </div>
+
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Image agrandie" />
+  </div>
+
+ <footer>
+     <p>&copy; 2025 Kaïs Padrines — Portfolio BTS SIO SLAM</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".project-card img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      });
+    });
+  </script>
+</body>
+  <div class="stars"></div>
+  <!-- tout le reste de ton contenu ici -->
+</html>
